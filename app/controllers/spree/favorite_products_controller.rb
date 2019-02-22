@@ -1,6 +1,7 @@
 module Spree
   class FavoriteProductsController < Spree::StoreController
-
+    helper ProductsHelper
+    
     before_action :store_favorite_product_preference, only: :create
     before_action :authenticate_spree_user!, except: :get_favoritable_value
     before_action :find_favorite_product, only: :destroy

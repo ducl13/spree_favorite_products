@@ -1,5 +1,5 @@
 <% if @favorite %>
-  $('.favorite_link').attr('href', '<%= favorite_product_path(id: params[:id], type: params[:type]) %>').attr('id', 'unmark-as-favorite').data('method', 'delete').text('<%= Spree.t(:unmark_as_favorite) %>')
+  $('.favorite_link').attr('href', '<%= favorite_product_path(id: params[:id], type: params[:type]) %>').attr('id', 'unmark-as-favorite').attr('data-method', 'delete').html('<i class="fa fa-heart"></i>');
 <% else %>
-  $('.favorite_link').attr('href', '<%= favorite_products_path(id: params[:id], type: params[:type]) %>').attr('id', 'mark-as-favorite').data('method', 'post').text('<%= Spree.t(:mark_as_favorite) %>')
+  $('.favorite_link').attr('href', '<%= favorite_products_path(id: params[:id], type: params[:type]) %>').attr('id', 'mark-as-favorite').attr('data-method', 'post').html('<i class="fa fa-heart-o"></i>');
 <% end %>
