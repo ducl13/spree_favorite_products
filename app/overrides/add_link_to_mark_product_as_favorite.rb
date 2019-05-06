@@ -1,3 +1,4 @@
+=begin
 Deface::Override.new(
   virtual_path: 'spree/products/show',
   name: 'add_link_to_mark_product_as_favorite',
@@ -11,3 +12,4 @@ Deface::Override.new(
     <% end %>
   }
 )
+=end
